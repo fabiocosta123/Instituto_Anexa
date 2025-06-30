@@ -1,0 +1,6 @@
+@Plataforma_Anexa_HostAddress = http://localhost:5273
+
+GET {{Plataforma_Anexa_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

@@ -13,7 +13,8 @@ Repositório que representa a camada de Domínio da aplicação **Anexa**, respo
 5. [📡 Eventos e Handlers](#-eventos-e-handlers)
 6. [📦 Repositórios](#-repositórios)
 7. [📐 Arquitetura Adotada](#-arquitetura-adotada)
-8. [🚧 Próximos Passos](#-próximos-passos)
+8. [🧾 Value Objects](#-value-objects)
+9. [🚧 Próximos Passos](#-próximos-passos)
 
 ---
 
@@ -35,8 +36,13 @@ Este projeto define o núcleo do domínio da aplicação Anexa, uma plataforma e
 ---
 
 ## 🏛️ Estrutura de Domínio
-Anexa.Domain/ ├── Entities/ ├── Events/ ├── Exceptions/ ├── Handlers/ ├── Interfaces/ ├── ValueObjects/
-
+Anexa.Domain/
+├── Entities/
+├── Events/
+├── Exceptions/
+├── Handlers/
+├── Interfaces/
+├── ValueObjects/
 
 ---
 
@@ -82,14 +88,62 @@ Interfaces já definidas para persistência de entidades:
 
 ---
 
-## 🚧 Próximos Passos
+## 🧾 Value Objects
 
-- [ ] Criar ValueObjects (`Email`, `Cpf`, `MetodoPagamento`, etc)
-- [ ] Adicionar testes unitários para validar regras de negócio
+Objetos de valor encapsulam regras e validações de dados imutáveis no domínio.
+
+### 🧾 `Cpf`
+
+Representa um CPF válido no formato brasileiro.
+
+- ✅ Validação:
+  - Deve conter 11 dígitos numéricos
+  - Não pode ser uma sequência inválida (ex: `00000000000`)
+  - Validação dos dígitos verificadores
+- 🧼 Normalização:
+  - Remove pontuação
+  - Armazena formatado: `000.000.000-00`
+- 🧪 Exemplo:
+  ```csharp
+  var cpf = new Cpf("12345678909");
+  Console.WriteLine(cpf); // 123.456.789-09
+
+   Email
+Representa um endereço de e-mail válido.
+- ✅ Validação:
+- Deve conter @ e domínio com ponto
+- Sem espaços ou caracteres inválidos
+- 🧼 Normalização:
+- Aplica Trim() e ToLowerInvariant()
+- 🧪 Exemplo:
+var email = new Email("  USUARIO@EMAIL.com ");
+Console.WriteLine(email); // usuario@email.com
+
+
+
+🏠 Endereco
+Representa um endereço físico completo.
+- ✅ Validação:
+- Todos os campos obrigatórios
+- CEP com 8 dígitos numéricos
+- 🧼 Normalização:
+- Remove traços e espaços do CEP
+- Estado em letras maiúsculas
+- 🧪 Exemplo:
+var endereco = new Endereco("Rua das Flores", "55", "Centro", "Registro", "SP", "11900000");
+Console.WriteLine(endereco);
+// Rua das Flores, 55 - Centro, Registro - SP, 11900-000
+
+
+
+🚧 Próximos Passos
+- [ X ] Criar ValueObjects (Email, Cpf, MetodoPagamento, etc)
+- [ X ] Adicionar testes unitários para validar regras de negócio
 - [ ] Criar repositórios restantes
-- [ ] Iniciar camada de aplicação (`Anexa.Application`)
+- [ ] Iniciar camada de aplicação (Anexa.Application)
 - [ ] Orquestrar casos de uso com Application Services
 
----
+Projeto mantido por Fábio 💻✨
 
-> Projeto mantido por **Fábio** 💻✨
+
+

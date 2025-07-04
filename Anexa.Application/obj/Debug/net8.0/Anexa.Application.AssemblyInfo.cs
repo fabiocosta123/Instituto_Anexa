@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Anexa.Application")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+66e32236593501c7b1499251d1cbdee83e08a467")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f6e55e87d1dc52a85afb96842254b6246db5e213")]
 [assembly: System.Reflection.AssemblyProductAttribute("Anexa.Application")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Anexa.Application")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -16,6 +16,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		.gitignore = .gitignore
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Anexa.Domain.Tests", "Anexa.Domain.Tests\Anexa.Domain.Tests.csproj", "{F33D49A6-BBEA-4B0B-A56D-A21519BD55B9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -38,6 +40,10 @@ Global
 		{A54B450E-F505-4368-B6F9-D51E4220D6E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A54B450E-F505-4368-B6F9-D51E4220D6E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A54B450E-F505-4368-B6F9-D51E4220D6E1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F33D49A6-BBEA-4B0B-A56D-A21519BD55B9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F33D49A6-BBEA-4B0B-A56D-A21519BD55B9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F33D49A6-BBEA-4B0B-A56D-A21519BD55B9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F33D49A6-BBEA-4B0B-A56D-A21519BD55B9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

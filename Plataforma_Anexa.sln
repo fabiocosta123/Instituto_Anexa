@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.14.36109.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Plataforma_Anexa", "Plataforma_Anexa\Plataforma_Anexa.csproj", "{7AD92ECC-93D2-4760-B11B-4D493FFFE7FC}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Anexa.Domain", "Anexa.Domain\Anexa.Domain.csproj", "{5EBBA179-5102-4B23-B0D5-1D95036A0D18}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Anexa.Infrastructure", "Anexa.Infrastructure\Anexa.Infrastructure.csproj", "{666995CA-8D0C-4248-B65D-701FCBB58189}"
@@ -18,16 +16,14 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Anexa.Domain.Tests", "Anexa.Domain.Tests\Anexa.Domain.Tests.csproj", "{F33D49A6-BBEA-4B0B-A56D-A21519BD55B9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Anexa.API", "Anexa.API\Anexa.API.csproj", "{E1A33CF3-8189-4C83-AB15-8D62DE40AD2D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{7AD92ECC-93D2-4760-B11B-4D493FFFE7FC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{7AD92ECC-93D2-4760-B11B-4D493FFFE7FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{7AD92ECC-93D2-4760-B11B-4D493FFFE7FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{7AD92ECC-93D2-4760-B11B-4D493FFFE7FC}.Release|Any CPU.Build.0 = Release|Any CPU
 		{5EBBA179-5102-4B23-B0D5-1D95036A0D18}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{5EBBA179-5102-4B23-B0D5-1D95036A0D18}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5EBBA179-5102-4B23-B0D5-1D95036A0D18}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -44,6 +40,10 @@ Global
 		{F33D49A6-BBEA-4B0B-A56D-A21519BD55B9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F33D49A6-BBEA-4B0B-A56D-A21519BD55B9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F33D49A6-BBEA-4B0B-A56D-A21519BD55B9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E1A33CF3-8189-4C83-AB15-8D62DE40AD2D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E1A33CF3-8189-4C83-AB15-8D62DE40AD2D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E1A33CF3-8189-4C83-AB15-8D62DE40AD2D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E1A33CF3-8189-4C83-AB15-8D62DE40AD2D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

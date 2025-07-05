@@ -10,3 +10,4 @@ C:\Dev_Projetos\Instituto_Anexa\Plataforma_Anexa\Anexa.Domain\obj\Debug\net8.0\A
 C:\Dev_Projetos\Instituto_Anexa\Plataforma_Anexa\Anexa.Domain\obj\Debug\net8.0\refint\Anexa.Domain.dll
 C:\Dev_Projetos\Instituto_Anexa\Plataforma_Anexa\Anexa.Domain\obj\Debug\net8.0\Anexa.Domain.pdb
 C:\Dev_Projetos\Instituto_Anexa\Plataforma_Anexa\Anexa.Domain\obj\Debug\net8.0\ref\Anexa.Domain.dll
+C:\Dev_Projetos\Instituto_Anexa\Plataforma_Anexa\Anexa.Domain\obj\Debug\net8.0\Anexa.Domain.csproj.AssemblyReference.cache

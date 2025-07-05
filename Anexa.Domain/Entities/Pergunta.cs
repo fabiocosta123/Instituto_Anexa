@@ -39,6 +39,8 @@ namespace Anexa.Domain.Entities
         {
             if (AlunoId == Guid.Empty)
                 throw new DomainException("Aluno não pode ser vazio.");
+            if (AutorId == Guid.Empty)
+                throw new DomainException("Autor não pode ser vazio.");
             if (CursoId == Guid.Empty)
                 throw new DomainException("Curso não pode ser vazio.");
             if (string.IsNullOrWhiteSpace(Texto))

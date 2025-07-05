@@ -11,17 +11,17 @@ namespace Anexa.Domain.Tests.ValueObjects
     public class CpfTests
     {
         [Theory]
-        [InlineData("12345678909")]
-        [InlineData("123.456.789-09")]
+        [InlineData("11144477735", "111.444.777-35")]
+        [InlineData("111.444.777-35", "111.444.777-35")]
 
-        public void Deve_Criar_Cpf_Valido(string entrada)
+        public void Deve_Criar_Cpf_Valido(string entrada, string esperadoFormatado)
         {
             // Act
-            var cpf = new Cpf(entrada);
+            var cpf = new Cpf(entrada);          
 
             // Assert
             Assert.NotNull(cpf);
-            Assert.Equal("12345678909", cpf.Numero);
+            Assert.Equal(esperadoFormatado, cpf.Numero);
         }
 
         [Theory]
@@ -41,8 +41,8 @@ namespace Anexa.Domain.Tests.ValueObjects
         public void Cpfs_iguais_devem_ser_iguais()
         {
             // Arrange
-            var cpf1 = new Cpf("12345678909");
-            var cpf2 = new Cpf("123.456.789-09");
+            var cpf1 = new Cpf("11144477735");
+            var cpf2 = new Cpf("111.444.777-35");
 
             // Act & Assert
             Assert.Equal(cpf1, cpf2);

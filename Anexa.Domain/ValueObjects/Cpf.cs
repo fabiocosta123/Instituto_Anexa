@@ -10,23 +10,23 @@ namespace Anexa.Domain.ValueObjects
 {
     public class Cpf
     {
-        public string Numero { get; }
+        private readonly string _numeroLimpo;
+
+        public string Numero => Formatado(_numeroLimpo);
+
         protected Cpf() { }
 
-        public Cpf(string numero) 
+        public Cpf(string numero)
         {
-            if (string.IsNullOrWhiteSpace(numero) || numero.Length != 11 || !long.TryParse(numero, out _))
-            {
-                throw new DomainException("CPF inválido. Deve conter 11 dígitos numéricos.");
-            }
-
             numero = Limpar(numero);
 
+            if (string.IsNullOrWhiteSpace(numero) || numero.Length != 11 || !long.TryParse(numero, out _))
+                throw new DomainException("CPF inválido. Deve conter 11 dígitos numéricos.");
+
             if (!ValidarCpf(numero))
-            {
                 throw new DomainException("CPF inválido. Verifique os dígitos verificadores.");
-            }
-            Numero = Formatado(numero);
+
+            _numeroLimpo = numero;
         }
 
         private string Limpar(string cpf) => Regex.Replace(cpf ?? string.Empty, "[^0-9]", "");
@@ -37,10 +37,10 @@ namespace Anexa.Domain.ValueObjects
 
         public override bool Equals(object obj)
         {
-            return obj is Cpf outro && Numero == outro.Numero;
+            return obj is Cpf outro && _numeroLimpo == outro._numeroLimpo;
         }
 
-        public override int GetHashCode() => Numero.GetHashCode();
+        public override int GetHashCode() => _numeroLimpo.GetHashCode();
 
         private bool ValidarCpf(string cpf)
         {

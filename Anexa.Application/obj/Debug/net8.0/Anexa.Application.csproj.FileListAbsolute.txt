@@ -1,0 +1,16 @@
+C:\Dev_Projetos\Instituto_Anexa\Plataforma_Anexa\Anexa.Application\bin\Debug\net8.0\Anexa.Application.deps.json
+C:\Dev_Projetos\Instituto_Anexa\Plataforma_Anexa\Anexa.Application\bin\Debug\net8.0\Anexa.Application.dll
+C:\Dev_Projetos\Instituto_Anexa\Plataforma_Anexa\Anexa.Application\bin\Debug\net8.0\Anexa.Application.pdb
+C:\Dev_Projetos\Instituto_Anexa\Plataforma_Anexa\Anexa.Application\bin\Debug\net8.0\Anexa.Domain.dll
+C:\Dev_Projetos\Instituto_Anexa\Plataforma_Anexa\Anexa.Application\bin\Debug\net8.0\Anexa.Domain.pdb
+C:\Dev_Projetos\Instituto_Anexa\Plataforma_Anexa\Anexa.Application\obj\Debug\net8.0\Anexa.Application.csproj.AssemblyReference.cache
+C:\Dev_Projetos\Instituto_Anexa\Plataforma_Anexa\Anexa.Application\obj\Debug\net8.0\Anexa.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Dev_Projetos\Instituto_Anexa\Plataforma_Anexa\Anexa.Application\obj\Debug\net8.0\Anexa.Application.AssemblyInfoInputs.cache
+C:\Dev_Projetos\Instituto_Anexa\Plataforma_Anexa\Anexa.Application\obj\Debug\net8.0\Anexa.Application.AssemblyInfo.cs
+C:\Dev_Projetos\Instituto_Anexa\Plataforma_Anexa\Anexa.Application\obj\Debug\net8.0\Anexa.Application.csproj.CoreCompileInputs.cache
+C:\Dev_Projetos\Instituto_Anexa\Plataforma_Anexa\Anexa.Application\obj\Debug\net8.0\Anexa.Application.sourcelink.json
+C:\Dev_Projetos\Instituto_Anexa\Plataforma_Anexa\Anexa.Application\obj\Debug\net8.0\Anexa.Ap.95C38810.Up2Date
+C:\Dev_Projetos\Instituto_Anexa\Plataforma_Anexa\Anexa.Application\obj\Debug\net8.0\Anexa.Application.dll
+C:\Dev_Projetos\Instituto_Anexa\Plataforma_Anexa\Anexa.Application\obj\Debug\net8.0\refint\Anexa.Application.dll
+C:\Dev_Projetos\Instituto_Anexa\Plataforma_Anexa\Anexa.Application\obj\Debug\net8.0\Anexa.Application.pdb
+C:\Dev_Projetos\Instituto_Anexa\Plataforma_Anexa\Anexa.Application\obj\Debug\net8.0\ref\Anexa.Application.dll

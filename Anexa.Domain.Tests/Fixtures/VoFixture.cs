@@ -5,7 +5,7 @@ namespace Anexa.Domain.Tests.Fixtures
     public static class VoFixture
     {
         public static Cpf CpfValido()
-            => new("12345678909");
+            => new("11144477735");
 
         public static Email EmailValido()
             => new("fabio@exemplo.com");

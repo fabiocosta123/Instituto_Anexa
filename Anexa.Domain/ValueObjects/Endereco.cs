@@ -37,7 +37,7 @@ namespace Anexa.Domain.ValueObjects
 
         public override string ToString()
         {
-            return $"{Rua}, {Numero} - {Bairro}, {Cidade}/{Estado} - CEP: {FormatarCep(Cep)}";
+            return $"{Rua}, {Numero} - {Bairro}, {Cidade} - {Estado}, {FormatarCep(Cep)}";
         }
 
         private string FormatarCep(string cep)

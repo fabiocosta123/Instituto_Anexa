@@ -1,0 +1,12 @@
+C:\Dev_Projetos\Instituto_Anexa\Plataforma_Anexa\Anexa.Domain\bin\Debug\net8.0\Anexa.Domain.deps.json
+C:\Dev_Projetos\Instituto_Anexa\Plataforma_Anexa\Anexa.Domain\bin\Debug\net8.0\Anexa.Domain.dll
+C:\Dev_Projetos\Instituto_Anexa\Plataforma_Anexa\Anexa.Domain\bin\Debug\net8.0\Anexa.Domain.pdb
+C:\Dev_Projetos\Instituto_Anexa\Plataforma_Anexa\Anexa.Domain\obj\Debug\net8.0\Anexa.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Dev_Projetos\Instituto_Anexa\Plataforma_Anexa\Anexa.Domain\obj\Debug\net8.0\Anexa.Domain.AssemblyInfoInputs.cache
+C:\Dev_Projetos\Instituto_Anexa\Plataforma_Anexa\Anexa.Domain\obj\Debug\net8.0\Anexa.Domain.AssemblyInfo.cs
+C:\Dev_Projetos\Instituto_Anexa\Plataforma_Anexa\Anexa.Domain\obj\Debug\net8.0\Anexa.Domain.csproj.CoreCompileInputs.cache
+C:\Dev_Projetos\Instituto_Anexa\Plataforma_Anexa\Anexa.Domain\obj\Debug\net8.0\Anexa.Domain.sourcelink.json
+C:\Dev_Projetos\Instituto_Anexa\Plataforma_Anexa\Anexa.Domain\obj\Debug\net8.0\Anexa.Domain.dll
+C:\Dev_Projetos\Instituto_Anexa\Plataforma_Anexa\Anexa.Domain\obj\Debug\net8.0\refint\Anexa.Domain.dll
+C:\Dev_Projetos\Instituto_Anexa\Plataforma_Anexa\Anexa.Domain\obj\Debug\net8.0\Anexa.Domain.pdb
+C:\Dev_Projetos\Instituto_Anexa\Plataforma_Anexa\Anexa.Domain\obj\Debug\net8.0\ref\Anexa.Domain.dll

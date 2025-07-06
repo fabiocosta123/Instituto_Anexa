@@ -41,5 +41,10 @@ namespace Anexa.Infrastructure.Repositories
             return await _context.Usuarios
                 .FirstOrDefaultAsync(u => u.Id == id);
         }
+
+        public async Task<List<Usuario>> ObterTodos()
+        {
+            return await _context.Usuarios.ToListAsync();
+        }
     }
 }

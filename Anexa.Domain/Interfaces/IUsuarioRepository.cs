@@ -10,8 +10,9 @@ namespace Anexa.Domain.Interfaces
     public interface IUsuarioRepository
     {
         Task Adicionar(Usuario usuario);
+        Task<List<Usuario>> ObterTodos();
         Task<Usuario?> ObterPorId(Guid id);
         Task<Usuario?> ObterPorEmail(string email);
-        Task<IEnumerable<Usuario>> ListarTodos();
+        
     }
 }

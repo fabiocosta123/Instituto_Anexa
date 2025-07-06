@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Anexa.API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b43a16fbdefcd4d85757c575b288ed3fa285d515")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e5bd94488315a07dae707b6f427f3fc6405ccd37")]
 [assembly: System.Reflection.AssemblyProductAttribute("Anexa.API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Anexa.API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

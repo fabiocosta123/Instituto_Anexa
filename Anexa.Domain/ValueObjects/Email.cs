@@ -11,6 +11,8 @@ namespace Anexa.Domain.ValueObjects
     public class Email
     {
         public string Endereco { get; }
+
+        public static implicit operator string(Email email) => email.Endereco;
         protected Email() { }
 
         public Email(string endereco) 

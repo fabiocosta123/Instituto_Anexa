@@ -14,7 +14,8 @@ namespace Anexa.Domain.Tests.Entities
                 nome: "Fábio",
                 cpf: VoFixture.CpfValido(),
                 email: VoFixture.EmailValido(),
-                endereco: VoFixture.EnderecoValido()
+                endereco: VoFixture.EnderecoValido(),
+                senhaHash: "senha-segura"
             );
 
             Assert.Equal("Fábio", usuario.Nome);
@@ -34,7 +35,8 @@ namespace Anexa.Domain.Tests.Entities
                     nome: nomeInvalido,
                     cpf: VoFixture.CpfValido(),
                     email: VoFixture.EmailValido(),
-                    endereco: VoFixture.EnderecoValido()
+                    endereco: VoFixture.EnderecoValido(),
+                    senhaHash: "senha-segura"
                 ));
         }
 
@@ -46,7 +48,8 @@ namespace Anexa.Domain.Tests.Entities
                     nome: "Fábio",
                     cpf: null,
                     email: VoFixture.EmailValido(),
-                    endereco: VoFixture.EnderecoValido()
+                    endereco: VoFixture.EnderecoValido(),
+                    senhaHash: "senha-segura"
                 ));
         }
 
@@ -58,7 +61,8 @@ namespace Anexa.Domain.Tests.Entities
                     nome: "Fábio",
                     cpf: VoFixture.CpfValido(),
                     email: null,
-                    endereco: VoFixture.EnderecoValido()
+                    endereco: VoFixture.EnderecoValido(),
+                    senhaHash: "senha-segura"
                 ));
         }
 
@@ -70,7 +74,8 @@ namespace Anexa.Domain.Tests.Entities
                     nome: "Fábio",
                     cpf: VoFixture.CpfValido(),
                     email: VoFixture.EmailValido(),
-                    endereco: null
+                    endereco: null,
+                    senhaHash: "senha-segura"
                 ));
         }
     }

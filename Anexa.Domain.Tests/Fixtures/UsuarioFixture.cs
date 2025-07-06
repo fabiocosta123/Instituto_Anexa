@@ -9,7 +9,8 @@ namespace Anexa.Domain.Tests.Fixtures
                 nome,
                 VoFixture.CpfValido(),
                 VoFixture.EmailValido(),
-                VoFixture.EnderecoValido()
+                VoFixture.EnderecoValido(),
+                senhaHash: "senha-segura"
             );
     }
 }

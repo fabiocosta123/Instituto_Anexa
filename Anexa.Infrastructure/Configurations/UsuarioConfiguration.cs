@@ -19,7 +19,7 @@ namespace Anexa.Infrastructure.Configurations
 
             builder.OwnsOne(u => u.Cpf, cpf =>
             {
-                cpf.Property(c => c.Numero)
+                cpf.Property<string>("_numeroLimpo")
                 .HasColumnName("Cpf")
                 .IsRequired()
                 .HasMaxLength(11);

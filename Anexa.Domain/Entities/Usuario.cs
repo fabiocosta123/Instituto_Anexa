@@ -20,14 +20,14 @@ namespace Anexa.Domain.Entities
 
         protected Usuario() { }
 
-        public Usuario(string nome, Cpf cpf, Email email, Endereco endereco)
+        public Usuario(string nome, Cpf cpf, Email email, Endereco endereco, string senhaHash)
         {
             Id = Guid.NewGuid();
             Nome = nome;
             Cpf = cpf;
             Email = email;
             Endereco = endereco;
-
+            SenhaHash = senhaHash;
             Validar();
            
         }

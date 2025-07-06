@@ -1,1 +1,18 @@
-[]
+[
+  {
+    "ContainingType": "Anexa.API.Controllers.UsuariosController",
+    "Method": "CriarUsuario",
+    "RelativePath": "api/Usuarios",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "command",
+        "Type": "Anexa.Application.UseCases.CriarUsuario.CriarUsuarioCommand",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

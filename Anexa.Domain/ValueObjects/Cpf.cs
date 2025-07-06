@@ -10,7 +10,7 @@ namespace Anexa.Domain.ValueObjects
 {
     public class Cpf
     {
-        private readonly string _numeroLimpo;
+        private string _numeroLimpo;
 
         public string Numero => Formatado(_numeroLimpo);
 

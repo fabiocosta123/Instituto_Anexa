@@ -1,12 +1,9 @@
-﻿using Anexa.Domain.Entities;
+﻿using Anexa.Application.UseCases.AtualizarUsuario;
+using Anexa.Domain.Entities;
 using Anexa.Domain.Interfaces;
 using Anexa.Infrastructure.Context;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace Anexa.Infrastructure.Repositories
 {
@@ -45,6 +42,24 @@ namespace Anexa.Infrastructure.Repositories
         public async Task<List<Usuario>> ObterTodos()
         {
             return await _context.Usuarios.ToListAsync();
+        }
+
+        [HttpPut("{id}")]
+        public async Task<IActionResult> Atualizar(Guid id, [FromBody] AtualizarUsuarioCommand command)
+        {
+            if (id != command.Id)
+                return BadRequest("O ID da URL não corresponde ao ID do corpo da requisição.");
+
+            var handler = new AtualizarUsuarioHandler(_usuarioRepository);
+            var sucesso = await handler.Handle(command);
+
+            return sucesso ? NoContent() : NotFound();
+        }
+
+        public async Task Remover(Usuario usuario)
+        {
+            _context.Usuarios.Remove(usuario);
+            await _context.SaveChangesAsync();
         }
     }
 }

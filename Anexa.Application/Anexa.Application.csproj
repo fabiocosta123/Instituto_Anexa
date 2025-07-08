@@ -15,4 +15,9 @@
     <ProjectReference Include="..\Anexa.Domain\Anexa.Domain.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="UseCases\ObterTodosUsuarios\" />
+    <Folder Include="UseCases\ObterUsuarioPorId\" />
+  </ItemGroup>
+
 </Project>

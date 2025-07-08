@@ -46,5 +46,14 @@ namespace Anexa.Domain.Entities
             if (Endereco is null)
                 throw new DomainException("O endereço do usuário é obrigatório.");
         }
+
+        public void AtualizarDados(string nome, Cpf cpf, Email email, Endereco endereco)
+        {
+
+            Nome = nome;
+            Cpf = cpf;
+            Email = email;
+            Endereco = endereco;
+        }
     }
 }

@@ -13,6 +13,7 @@ namespace Anexa.Domain.Interfaces
         Task<List<Usuario>> ObterTodos();
         Task<Usuario?> ObterPorId(Guid id);
         Task<Usuario?> ObterPorEmail(string email);
-        
+        Task Remover(Usuario usuario);
+
     }
 }

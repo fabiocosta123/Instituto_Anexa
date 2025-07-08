@@ -1,5 +1,6 @@
 ﻿using Anexa.Application.Queries;
 using Anexa.Application.UseCases.CriarUsuario;
+using Anexa.Application.UseCases.RemoverUsuario;
 using Anexa.Domain.Interfaces;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -48,6 +49,15 @@ namespace Anexa.API.Controllers
                 return NotFound();
 
             return Ok(usuario);
+        }
+
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> Remover(Guid id)
+        {
+            var handler = new RemoverUsuarioHandler(_usuarioRepository);
+            var sucesso = await handler.Handle(id);
+
+            return sucesso ? NoContent() : NotFound();
         }
 
     }

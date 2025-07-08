@@ -36,6 +36,20 @@ namespace Anexa.API.Controllers
             return Ok(usuarios);
         }
 
+        [HttpGet("{id}")]
+        public async Task<IActionResult> ObterPorId(Guid id)
+        {
+            var query = new ObterUsuarioPorIdQuery(id);
+            var handler = new ObterUsuarioPorIdHandler(_usuarioRepository);
+
+            var usuario = await handler.Handle(query);
+
+            if (usuario == null)
+                return NotFound();
+
+            return Ok(usuario);
+        }
+
     }
 }
 

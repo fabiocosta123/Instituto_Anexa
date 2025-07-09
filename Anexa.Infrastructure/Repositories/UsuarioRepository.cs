@@ -42,19 +42,7 @@ namespace Anexa.Infrastructure.Repositories
         public async Task<List<Usuario>> ObterTodos()
         {
             return await _context.Usuarios.ToListAsync();
-        }
-
-        [HttpPut("{id}")]
-        public async Task<IActionResult> Atualizar(Guid id, [FromBody] AtualizarUsuarioCommand command)
-        {
-            if (id != command.Id)
-                return BadRequest("O ID da URL não corresponde ao ID do corpo da requisição.");
-
-            var handler = new AtualizarUsuarioHandler(_usuarioRepository);
-            var sucesso = await handler.Handle(command);
-
-            return sucesso ? NoContent() : NotFound();
-        }
+        }        
 
         public async Task Remover(Usuario usuario)
         {

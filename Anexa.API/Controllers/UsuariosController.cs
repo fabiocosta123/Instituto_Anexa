@@ -1,4 +1,5 @@
 ﻿using Anexa.Application.Queries;
+using Anexa.Application.UseCases.AtualizarUsuario;
 using Anexa.Application.UseCases.CriarUsuario;
 using Anexa.Application.UseCases.RemoverUsuario;
 using Anexa.Domain.Interfaces;
@@ -49,6 +50,18 @@ namespace Anexa.API.Controllers
                 return NotFound();
 
             return Ok(usuario);
+        }
+
+        [HttpPut("{id}")]
+        public async Task<IActionResult> Atualizar(Guid id, [FromBody] AtualizarUsuarioCommand command)
+        {
+            if (id != command.Id)
+                return BadRequest("O ID da URL não corresponde ao ID do corpo da requisição.");
+
+            var handler = new AtualizarUsuarioHandler(_usuarioRepository);
+            var sucesso = await handler.Handle(command);
+
+            return sucesso ? NoContent() : NotFound();
         }
 
         [HttpDelete("{id}")]

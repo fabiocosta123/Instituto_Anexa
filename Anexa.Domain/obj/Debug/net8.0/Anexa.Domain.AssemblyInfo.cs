@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Anexa.Domain")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+88bba382825642d8416e9cace2189dd4022a00a4")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+df8c9df4aaca6bb160d32979ef9d52b9561d82df")]
 [assembly: System.Reflection.AssemblyProductAttribute("Anexa.Domain")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Anexa.Domain")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

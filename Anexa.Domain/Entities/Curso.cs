@@ -1,11 +1,5 @@
 ﻿using Anexa.Domain.Events;
 using Anexa.Domain.Exceptions;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net.Http.Headers;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Anexa.Domain.Entities
 {
@@ -62,6 +56,14 @@ namespace Anexa.Domain.Entities
                 throw new DomainException("Módulo inválido.");                
             }
             _modulos.Add(modulo);
+        }
+
+        public void Atualizar(string titulo, string descricao, decimal preco)
+        {
+            Titulo = titulo;
+            Descricao = descricao;
+            Preco = preco;
+            Validar();
         }
 
         public void Desativar()

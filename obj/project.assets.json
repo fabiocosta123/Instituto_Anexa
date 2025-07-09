@@ -88,42 +88,6 @@
         "frameworkReferences": [
           "Microsoft.AspNetCore.App"
         ]
-      },
-      "Anexa.Application/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v8.0",
-        "dependencies": {
-          "Anexa.Domain": "1.0.0"
-        },
-        "compile": {
-          "bin/placeholder/Anexa.Application.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/Anexa.Application.dll": {}
-        }
-      },
-      "Anexa.Domain/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v8.0",
-        "compile": {
-          "bin/placeholder/Anexa.Domain.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/Anexa.Domain.dll": {}
-        }
-      },
-      "Anexa.Infrastructure/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v8.0",
-        "dependencies": {
-          "Anexa.Application": "1.0.0"
-        },
-        "compile": {
-          "bin/placeholder/Anexa.Infrastructure.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/Anexa.Infrastructure.dll": {}
-        }
       }
     }
   },
@@ -475,27 +439,10 @@
         "swashbuckle.aspnetcore.swaggerui.6.6.2.nupkg.sha512",
         "swashbuckle.aspnetcore.swaggerui.nuspec"
       ]
-    },
-    "Anexa.Application/1.0.0": {
-      "type": "project",
-      "path": "../Anexa.Application/Anexa.Application.csproj",
-      "msbuildProject": "../Anexa.Application/Anexa.Application.csproj"
-    },
-    "Anexa.Domain/1.0.0": {
-      "type": "project",
-      "path": "../Anexa.Domain/Anexa.Domain.csproj",
-      "msbuildProject": "../Anexa.Domain/Anexa.Domain.csproj"
-    },
-    "Anexa.Infrastructure/1.0.0": {
-      "type": "project",
-      "path": "../Anexa.Infrastructure/Anexa.Infrastructure.csproj",
-      "msbuildProject": "../Anexa.Infrastructure/Anexa.Infrastructure.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net8.0": [
-      "Anexa.Application >= 1.0.0",
-      "Anexa.Infrastructure >= 1.0.0",
       "Swashbuckle.AspNetCore >= 6.6.2"
     ]
   },
@@ -506,11 +453,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Dev_Projetos\\Instituto_Anexa\\Plataforma_Anexa\\Plataforma_Anexa\\Plataforma_Anexa.csproj",
+      "projectUniqueName": "C:\\Dev_Projetos\\Instituto_Anexa\\Plataforma_Anexa\\Plataforma_Anexa.csproj",
       "projectName": "Plataforma_Anexa",
-      "projectPath": "C:\\Dev_Projetos\\Instituto_Anexa\\Plataforma_Anexa\\Plataforma_Anexa\\Plataforma_Anexa.csproj",
+      "projectPath": "C:\\Dev_Projetos\\Instituto_Anexa\\Plataforma_Anexa\\Plataforma_Anexa.csproj",
       "packagesPath": "C:\\Users\\livra\\.nuget\\packages\\",
-      "outputPath": "C:\\Dev_Projetos\\Instituto_Anexa\\Plataforma_Anexa\\Plataforma_Anexa\\obj\\",
+      "outputPath": "C:\\Dev_Projetos\\Instituto_Anexa\\Plataforma_Anexa\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -531,14 +478,7 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
-          "projectReferences": {
-            "C:\\Dev_Projetos\\Instituto_Anexa\\Plataforma_Anexa\\Anexa.Application\\Anexa.Application.csproj": {
-              "projectPath": "C:\\Dev_Projetos\\Instituto_Anexa\\Plataforma_Anexa\\Anexa.Application\\Anexa.Application.csproj"
-            },
-            "C:\\Dev_Projetos\\Instituto_Anexa\\Plataforma_Anexa\\Anexa.Infrastructure\\Anexa.Infrastructure.csproj": {
-              "projectPath": "C:\\Dev_Projetos\\Instituto_Anexa\\Plataforma_Anexa\\Anexa.Infrastructure\\Anexa.Infrastructure.csproj"
-            }
-          }
+          "projectReferences": {}
         }
       },
       "warningProperties": {
@@ -581,7 +521,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.300/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.301/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

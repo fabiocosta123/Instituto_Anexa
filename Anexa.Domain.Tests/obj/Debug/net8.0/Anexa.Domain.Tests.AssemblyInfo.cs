@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Anexa.Domain.Tests")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e5bd94488315a07dae707b6f427f3fc6405ccd37")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+df8c9df4aaca6bb160d32979ef9d52b9561d82df")]
 [assembly: System.Reflection.AssemblyProductAttribute("Anexa.Domain.Tests")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Anexa.Domain.Tests")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

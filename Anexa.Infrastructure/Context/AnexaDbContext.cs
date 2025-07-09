@@ -13,6 +13,7 @@ namespace Anexa.Infrastructure.Context
         public AnexaDbContext(DbContextOptions<AnexaDbContext> options) : base(options) { }
 
         public DbSet<Usuario> Usuarios { get; set; }
+        public DbSet<Curso> Cursos { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

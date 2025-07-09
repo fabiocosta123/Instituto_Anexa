@@ -22,6 +22,39 @@ namespace Anexa.Infrastructure.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
+            modelBuilder.Entity("Anexa.Domain.Entities.Curso", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<bool>("Ativo")
+                        .HasColumnType("bit");
+
+                    b.Property<DateTime>("DataCriacao")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Descricao")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<Guid>("InstrutorId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<decimal>("Preco")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<string>("Titulo")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("InstrutorId");
+
+                    b.ToTable("Cursos");
+                });
+
             modelBuilder.Entity("Anexa.Domain.Entities.Usuario", b =>
                 {
                     b.Property<Guid>("Id")
@@ -43,6 +76,17 @@ namespace Anexa.Infrastructure.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Usuarios");
+                });
+
+            modelBuilder.Entity("Anexa.Domain.Entities.Curso", b =>
+                {
+                    b.HasOne("Anexa.Domain.Entities.Usuario", "Instrutor")
+                        .WithMany()
+                        .HasForeignKey("InstrutorId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Instrutor");
                 });
 
             modelBuilder.Entity("Anexa.Domain.Entities.Usuario", b =>

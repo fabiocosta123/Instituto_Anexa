@@ -1,0 +1,9 @@
+C:\Dev_Projetos\Instituto_Anexa\Plataforma_Anexa\obj\Debug\net8.0\Plataforma_Anexa.csproj.AssemblyReference.cache
+C:\Dev_Projetos\Instituto_Anexa\Plataforma_Anexa\obj\Debug\net8.0\rpswa.dswa.cache.json
+C:\Dev_Projetos\Instituto_Anexa\Plataforma_Anexa\obj\Debug\net8.0\Plataforma_Anexa.GeneratedMSBuildEditorConfig.editorconfig
+C:\Dev_Projetos\Instituto_Anexa\Plataforma_Anexa\obj\Debug\net8.0\Plataforma_Anexa.AssemblyInfoInputs.cache
+C:\Dev_Projetos\Instituto_Anexa\Plataforma_Anexa\obj\Debug\net8.0\Plataforma_Anexa.AssemblyInfo.cs
+C:\Dev_Projetos\Instituto_Anexa\Plataforma_Anexa\obj\Debug\net8.0\Plataforma_Anexa.csproj.CoreCompileInputs.cache
+C:\Dev_Projetos\Instituto_Anexa\Plataforma_Anexa\obj\Debug\net8.0\Plataforma_Anexa.MvcApplicationPartsAssemblyInfo.cs
+C:\Dev_Projetos\Instituto_Anexa\Plataforma_Anexa\obj\Debug\net8.0\Plataforma_Anexa.MvcApplicationPartsAssemblyInfo.cache
+C:\Dev_Projetos\Instituto_Anexa\Plataforma_Anexa\obj\Debug\net8.0\Plataforma_Anexa.sourcelink.json

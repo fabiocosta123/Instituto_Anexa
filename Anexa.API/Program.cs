@@ -16,6 +16,8 @@ builder.Services.AddDbContext<AnexaDbContext>(options =>
 // Regitrar o repositório de usuários
 builder.Services.AddScoped<IUsuarioRepository, UsuarioRepository>();
 
+builder.Services.AddScoped<ICursoRepository, CursoRepository>();
+
 // Adicionar Handlers 
 builder.Services.AddScoped<CriarUsuarioHandler>();
 

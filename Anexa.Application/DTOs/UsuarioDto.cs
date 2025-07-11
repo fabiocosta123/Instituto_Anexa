@@ -20,6 +20,7 @@ namespace Anexa.Application.DTOs
         public string Cep { get; set; }
         public Endereco Endereco { get; set; }
         public DateTime DataCadastro { get; set; }
-        
+        public bool Ativo { get; set; }
+
     }
 }

@@ -1,4 +1,5 @@
 C:\Dev_Projetos\Instituto_Anexa\Plataforma_Anexa\Anexa.Infrastructure\bin\Debug\net8.0\Anexa.Infrastructure.deps.json
+C:\Dev_Projetos\Instituto_Anexa\Plataforma_Anexa\Anexa.Infrastructure\bin\Debug\net8.0\Anexa.Infrastructure.runtimeconfig.json
 C:\Dev_Projetos\Instituto_Anexa\Plataforma_Anexa\Anexa.Infrastructure\bin\Debug\net8.0\Anexa.Infrastructure.dll
 C:\Dev_Projetos\Instituto_Anexa\Plataforma_Anexa\Anexa.Infrastructure\bin\Debug\net8.0\Anexa.Infrastructure.pdb
 C:\Dev_Projetos\Instituto_Anexa\Plataforma_Anexa\Anexa.Infrastructure\bin\Debug\net8.0\Anexa.Application.dll
@@ -15,4 +16,5 @@ C:\Dev_Projetos\Instituto_Anexa\Plataforma_Anexa\Anexa.Infrastructure\obj\Debug\
 C:\Dev_Projetos\Instituto_Anexa\Plataforma_Anexa\Anexa.Infrastructure\obj\Debug\net8.0\Anexa.Infrastructure.dll
 C:\Dev_Projetos\Instituto_Anexa\Plataforma_Anexa\Anexa.Infrastructure\obj\Debug\net8.0\refint\Anexa.Infrastructure.dll
 C:\Dev_Projetos\Instituto_Anexa\Plataforma_Anexa\Anexa.Infrastructure\obj\Debug\net8.0\Anexa.Infrastructure.pdb
+C:\Dev_Projetos\Instituto_Anexa\Plataforma_Anexa\Anexa.Infrastructure\obj\Debug\net8.0\Anexa.Infrastructure.genruntimeconfig.cache
 C:\Dev_Projetos\Instituto_Anexa\Plataforma_Anexa\Anexa.Infrastructure\obj\Debug\net8.0\ref\Anexa.Infrastructure.dll

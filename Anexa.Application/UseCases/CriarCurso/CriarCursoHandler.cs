@@ -1,4 +1,5 @@
 ﻿using Anexa.Application.DTOs;
+using Anexa.Application.Interfaces;
 using Anexa.Domain.Entities;
 using Anexa.Domain.Interfaces;
 using System;
@@ -13,11 +14,13 @@ namespace Anexa.Application.UseCases.CriarCurso
     {
         private readonly ICursoRepository _cursoRepository;
         private readonly IUsuarioRepository _usuarioRepository;
+        private readonly IModuloRepository _moduloRepository;
 
-        public CriarCursoHandler(ICursoRepository cursoRepository, IUsuarioRepository usuarioRepository)
+        public CriarCursoHandler(ICursoRepository cursoRepository, IUsuarioRepository usuarioRepository, IModuloRepository moduloRepository)
         {
             _cursoRepository = cursoRepository;
             _usuarioRepository = usuarioRepository;
+            _moduloRepository = moduloRepository;
         }
 
         public async Task<CursoDto?> Handle(CriarCursoCommand command)

@@ -14,6 +14,7 @@ namespace Anexa.Domain.Entities
         public string? Descricao { get; private set; }
         public int Ordem { get; private set; }
         public Guid CursoId { get; private set; }
+        public Curso Curso { get; private set; }
 
         protected Modulo() { }
 
@@ -34,11 +35,19 @@ namespace Anexa.Domain.Entities
             {
                 throw new DomainException("O título do módulo é obrigatório.");
             }
-            
+
             if (Ordem <= 0)
             {
                 throw new DomainException("A ordem do módulo deve ser maior que zero.");
             }
+        }
+
+        public void Atualizar(string titulo, int ordem, string? descricao = null)
+        {
+            Titulo = titulo;
+            Ordem = ordem;
+            Descricao = descricao;
+            Validar();
         }
     }
 }

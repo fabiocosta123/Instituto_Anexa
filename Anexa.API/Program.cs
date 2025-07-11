@@ -1,3 +1,4 @@
+using Anexa.Application.Interfaces;
 using Anexa.Application.UseCases.CriarUsuario;
 using Anexa.Domain.Interfaces;
 using Anexa.Infrastructure.Context;
@@ -17,6 +18,7 @@ builder.Services.AddDbContext<AnexaDbContext>(options =>
 builder.Services.AddScoped<IUsuarioRepository, UsuarioRepository>();
 
 builder.Services.AddScoped<ICursoRepository, CursoRepository>();
+builder.Services.AddScoped<IModuloRepository, ModuloRepository>();
 
 // Adicionar Handlers 
 builder.Services.AddScoped<CriarUsuarioHandler>();

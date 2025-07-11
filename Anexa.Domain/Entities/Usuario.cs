@@ -18,6 +18,8 @@ namespace Anexa.Domain.Entities
         public Endereco Endereco { get; private set; }
         public DateTime DataCadastro { get; private set; } = DateTime.Now;
 
+        public bool Ativo { get; private set; }
+
         protected Usuario() { }
 
         public Usuario(string nome, Cpf cpf, Email email, Endereco endereco, string senhaHash)

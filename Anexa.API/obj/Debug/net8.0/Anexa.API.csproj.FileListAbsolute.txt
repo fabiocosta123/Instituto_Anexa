@@ -176,3 +176,5 @@ C:\Dev_Projetos\Instituto_Anexa\Plataforma_Anexa\Anexa.API\obj\Debug\net8.0\refi
 C:\Dev_Projetos\Instituto_Anexa\Plataforma_Anexa\Anexa.API\obj\Debug\net8.0\Anexa.API.pdb
 C:\Dev_Projetos\Instituto_Anexa\Plataforma_Anexa\Anexa.API\obj\Debug\net8.0\Anexa.API.genruntimeconfig.cache
 C:\Dev_Projetos\Instituto_Anexa\Plataforma_Anexa\Anexa.API\obj\Debug\net8.0\ref\Anexa.API.dll
+C:\Dev_Projetos\Instituto_Anexa\Plataforma_Anexa\Anexa.API\bin\Debug\net8.0\BCrypt.Net-Next.dll
+C:\Dev_Projetos\Instituto_Anexa\Plataforma_Anexa\Anexa.API\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll

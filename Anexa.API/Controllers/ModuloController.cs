@@ -4,9 +4,11 @@ using Anexa.Application.UseCases.AtualizarModulo;
 using Anexa.Application.UseCases.CriarModulo;
 using Anexa.Application.UseCases.RemoverModulo;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Anexa.API.Controllers
 {
+    [Authorize]
     [ApiController]
     [Route("api/[controller]")]
     public class ModuloController : ControllerBase
@@ -20,6 +22,7 @@ namespace Anexa.API.Controllers
             _cursoRepository = cursoRepository;
         }
 
+        [Authorize(Roles = "Professor")]
         [HttpPost]
         public async Task<ActionResult<ModuloDto>> Criar([FromBody] CriarModuloCommand command)
         {

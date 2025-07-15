@@ -1,5 +1,6 @@
 ﻿using Anexa.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -21,5 +22,21 @@ namespace Anexa.Infrastructure.Context
             modelBuilder.ApplyConfigurationsFromAssembly(typeof(AnexaDbContext).Assembly);
             base.OnModelCreating(modelBuilder);
         }
+
+        public AnexaDbContext CreateDbContext(string[] args)
+        {
+            var config = new ConfigurationBuilder()
+                .SetBasePath(Directory.GetCurrentDirectory())
+                .AddJsonFile("appsettings.json")
+                .Build();
+
+            var connectionString = config.GetConnectionString("DefaultConnection");
+
+            var optionsBuilder = new DbContextOptionsBuilder<AnexaDbContext>();
+            optionsBuilder.UseSqlServer(connectionString);
+
+            return new AnexaDbContext(optionsBuilder.Options);
+        }
+
     }
 }

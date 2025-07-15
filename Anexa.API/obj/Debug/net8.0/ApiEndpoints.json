@@ -125,6 +125,22 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "Anexa.API.Controllers.LoginController",
+    "Method": "Login",
+    "RelativePath": "api/Login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Anexa.Application.DTOs.LoginRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "Anexa.API.Controllers.ModuloController",
     "Method": "Criar",
     "RelativePath": "api/Modulo",

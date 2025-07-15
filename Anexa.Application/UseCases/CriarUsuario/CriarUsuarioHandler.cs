@@ -29,7 +29,7 @@ namespace Anexa.Application.UseCases.CriarUsuario
                 command.Endereco.Cidade,
                 command.Endereco.Estado,
                 command.Endereco.Cep);
-           
+
 
             var senhaHash = CriptografarSenha(command.Senha); // ou usar um serviço de hash
 
@@ -42,15 +42,9 @@ namespace Anexa.Application.UseCases.CriarUsuario
             );
 
         }
-
-        // 🔐 Método auxiliar para gerar o hash da senha
         private string CriptografarSenha(string senha)
         {
-            // Exemplo com SHA256 (não recomendado para produção)
-            using var sha256 = System.Security.Cryptography.SHA256.Create();
-            var bytes = Encoding.UTF8.GetBytes(senha);
-            var hash = sha256.ComputeHash(bytes);
-            return Convert.ToBase64String(hash);
+            return BCrypt.Net.BCrypt.HashPassword(senha);
         }
 
     }

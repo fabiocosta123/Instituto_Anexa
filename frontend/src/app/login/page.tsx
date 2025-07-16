@@ -47,7 +47,7 @@ export default function LoginPage() {
         {erro && <p className="text-red-500 mb-2 text-sm">{erro}</p>}
         <button
           onClick={handleLogin}
-          className="w-full bg-blue-600 text-white p-2 rounded hover:bg-blue-700"
+          className="w-full bg-blue-600 text-white p-2 rounded hover:bg-blue-700 cursor-pointer transition-colors"
         >
           Entrar
         </button>

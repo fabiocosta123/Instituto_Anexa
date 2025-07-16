@@ -26,7 +26,7 @@ namespace Anexa.Application.Services
                 new Claim(ClaimTypes.NameIdentifier, usuario.Id.ToString()),
                 new Claim(ClaimTypes.Email, usuario.Email.Endereco),
                 new Claim("nome", usuario.Nome),
-                new Claim("perfil", "professor"), // Assuming the user is a professor
+                new Claim("perfil", usuario.Perfil.ToString()), 
                 new Claim("ativo", usuario.Ativo.ToString())
             };
 

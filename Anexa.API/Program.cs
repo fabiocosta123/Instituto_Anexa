@@ -1,3 +1,4 @@
+using Anexa.API.Middleware;
 using Anexa.API.Settings;
 using Anexa.Application.Interfaces;
 using Anexa.Application.Services;
@@ -72,5 +73,7 @@ app.UseHttpsRedirection();
 app.UseAuthorization();
 
 app.MapControllers();
+
+app.UseMiddleware<LoginRequisicaoMiddleware>();
 
 app.Run();

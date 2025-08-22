@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import Link from "next/link";
+import { FaLinkedin, FaGithub } from 'react-icons/fa';
 import "./globals.css";
 
 const geistSans = Geist({
@@ -23,11 +25,95 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="pt-BR">
+
+      
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {children}
+        <nav
+          style={{
+            display: "flex",
+            justifyContent: "space-between",
+            alignItems: "center",
+            backgroundColor: "#7B1E3A",
+            color: "white",
+            padding: "16px 32px",
+          }}
+        >
+          <div style={{ fontWeight: "bold", fontSize: "20px" }}>Anexa</div>
+          <ul
+            style={{
+              display: "flex",
+              gap: "24px",
+              listStyle: "none",
+              margin: 0,
+            }}
+          >
+            <li>
+              <Link href="/" style={{ color: "white", textDecoration: "none" }}>
+                Início
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/cursos"
+                style={{ color: "white", textDecoration: "none" }}
+              >
+                Cursos
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/quem-somos"
+                style={{ color: "white", textDecoration: "none" }}
+              >
+                Quem Somos
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/login"
+                style={{ color: "white", textDecoration: "none" }}
+              >
+                Login
+              </Link>
+            </li>
+          </ul>
+        </nav>
+
+        <div style={{ padding: "32px" }}>{children}</div>
+
+        <footer
+          style={{
+            backgroundColor: "#7B1E3A",
+            color: "white",
+            padding: "16px 32px",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            fontSize: "14px",
+            marginTop: "auto",
+          }}
+        >
+          <span>© Desenvolvido por Fábio Costa</span>
+          <div style={{ display: "flex", gap: "16px" }}>
+            <a
+              href="https://www.linkedin.com/in/fabio-costa-silva-/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaLinkedin size={20} />
+            </a>
+            <a
+              href="https://github.com/fabiocosta123/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+             <FaGithub size={20} />
+            </a>
+          </div>
+        </footer>
       </body>
     </html>
   );

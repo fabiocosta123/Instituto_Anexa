@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import Link from "next/link";
 import { FaLinkedin, FaGithub } from 'react-icons/fa';
 import "./globals.css";
+import ThemeToggle from "@/components/ThemeToogle";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -30,18 +31,20 @@ export default function RootLayout({
       
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        
       >
+        <ThemeToggle />
         <nav
           style={{
             display: "flex",
             justifyContent: "space-between",
             alignItems: "center",
-            backgroundColor: "#7B1E3A",
-            color: "white",
-            padding: "10px 32px",
+            backgroundColor: "var(--nav-bg)",
+            color: "var( --text-color)",
+            padding: "10px 72px",
           }}
         >
-          <div style={{ fontWeight: "bold", fontSize: "20px" }}>Anexa</div>
+          <div style={{ fontWeight: "bold", fontSize: "20px", color:"white" }}>Anexa</div>
           <ul
             style={{
               display: "flex",
@@ -81,13 +84,13 @@ export default function RootLayout({
             </li>
             
           </ul>
-        </nav>
-
+        </nav>        
+       
         <div style={{ padding: "32px" }}>{children}</div>
 
         <footer
           style={{
-            backgroundColor: "#7B1E3A",
+            backgroundColor: "var(--footer-bg)",
             color: "white",
             padding: "16px 32px",
             display: "flex",

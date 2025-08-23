@@ -1,9 +1,28 @@
-@import "tailwindcss";
-
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --bg-color: #f0f2f5;
+  --text-color: #2c3e50;
+  --nav-bg: #7B1E3A;
+  --footer-bg: #7B1E3A;
+  --button-bg: #2c3e50;
+  --button-text: #ffffff;
+  --bg-start: #F5F7FA;
+  --bg-mid: #D4AF37;
+  --bg-end: #7B1E3A;
 }
+
+[data-theme="dark"] {
+  --bg-color: #1a252f;
+  --text-color: #f0f2f5;
+  --nav-bg: #111;
+  --footer-bg: #111;
+  --button-bg: #d4af37;
+  --button-text: #1a252f;
+  --bg-start: #1a252f;
+  --bg-mid: #2c3e50;
+  --bg-end: #000000;
+}
+
+
 
 @theme inline {
   --color-background: var(--background);
@@ -20,12 +39,26 @@
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
+  background: var(--bg-color);
+  color: var(--text-color);
   font-family: Arial, Helvetica, sans-serif;
   margin: 0;
   padding: 0;
   font-family: 'Segoe UI', sans-serif;
-  background: linear-gradient(to bottom right, #F5F7FA, #D4AF37, #7B1E3A);
+  background: linear-gradient(to bottom right, var(--bg-start), var(--bg-mid), var(--bg-end));
   color: #2C3E50;
+}
+
+.theme-toggle {
+  position: fixed;
+  top: -6px;
+  right: 16px;
+  z-index: 1000;
+  background-color: var(--button-bg);
+  color: var(--button-text);
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.5rem;
 }

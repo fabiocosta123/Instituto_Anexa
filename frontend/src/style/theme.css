@@ -1,0 +1,31 @@
+:root {
+  --bg-color: #f0f2f5;
+  --text-color: #2c3e50;
+  --button-bg: #2c3e50;
+  --button-text: #ffffff;
+}
+
+[data-theme="dark"] {
+  --bg-color: #1a252f;
+  --text-color: #f0f2f5;
+  --button-bg: #d4af37;
+  --button-text: #1a252f;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.theme-toggle {
+  background-color: var(--button-bg);
+  color: var(--button-text);
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin: 1rem auto;
+  display: block;
+  transition: background-color 0.3s ease;
+}

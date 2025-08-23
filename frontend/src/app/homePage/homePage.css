@@ -1,0 +1,13 @@
+.home {
+  min-height: 100vh;
+  background: linear-gradient(to bottom, #f0f2f5, #ffffff);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.home-content {
+  width: 100%;
+  max-width: 640px;
+}

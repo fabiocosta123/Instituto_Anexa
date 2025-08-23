@@ -38,7 +38,7 @@ export default function RootLayout({
             alignItems: "center",
             backgroundColor: "#7B1E3A",
             color: "white",
-            padding: "16px 32px",
+            padding: "10px 32px",
           }}
         >
           <div style={{ fontWeight: "bold", fontSize: "20px" }}>Anexa</div>
@@ -79,6 +79,7 @@ export default function RootLayout({
                 Login
               </Link>
             </li>
+            
           </ul>
         </nav>
 
@@ -97,7 +98,7 @@ export default function RootLayout({
           }}
         >
           <span>© Desenvolvido por Fábio Costa</span>
-          <div style={{ display: "flex", gap: "16px" }}>
+          <div style={{ display: "flex", gap: "5px" }}>
             <a
               href="https://www.linkedin.com/in/fabio-costa-silva-/"
               target="_blank"

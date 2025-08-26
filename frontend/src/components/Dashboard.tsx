@@ -1,7 +1,9 @@
-'use client';
-
+"use client";
 import { useEffect, useState } from "react";
+import { useRouter } from "next/navigation";
+import { toast } from "react-toastify";
 import api from "../app/services/api";
+import "../styles/dashboard.css";
 
 interface Curso {
   id: number;
@@ -9,41 +11,49 @@ interface Curso {
   descricao: string;
 }
 
-
-//verificação
-useEffect(() => {
-  const token = localStorage.getItem("token");
-  if (!token) {
-    router.push("/login");
-  }
-}, []);
-
 export default function Dashboard() {
+  const router = useRouter();
   const [cursos, setCursos] = useState<Curso[]>([]);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const token = localStorage.getItem("token");
+    const fetchCursos = async () => {
+      const token = localStorage.getItem("token");
+      if (!token) {
+        router.push("/login");
+        return;
+      }
 
-    api.get<Curso[]>("/Cursos", {
-      headers: {
-        Authorization: `Bearer ${token}`,
-      },
-    })
-    .then((res) => setCursos(res.data))
-    .catch((err) => console.error("Erro ao buscar cursos", err));
-  }, []);
+      try {
+        const res = await api.get<Curso[]>("/Cursos", {
+          headers: { Authorization: `Bearer ${token}` },
+        });
+        setCursos(res.data);
+      } catch {
+        toast.error("Erro ao carregar cursos");
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchCursos();
+  }, [router]);
 
   return (
-    <div>
-      <h2>Meus Cursos</h2>
-      <ul>
-        {cursos.map((curso) => (
-          <li key={curso.id}>
-            <strong>{curso.titulo}</strong><br />
-            <span>{curso.descricao}</span>
-          </li>
-        ))}
-      </ul>
+    <div className="dashboard-container">
+      {loading ? (
+        <p>Carregando cursos...</p>
+      ) : (
+        <ul>
+          {cursos.map((curso) => (
+            <li key={curso.id}>
+              <strong>{curso.titulo}</strong>
+              <br />
+              <span>{curso.descricao}</span>
+            </li>
+          ))}
+        </ul>
+      )}
     </div>
   );
 }

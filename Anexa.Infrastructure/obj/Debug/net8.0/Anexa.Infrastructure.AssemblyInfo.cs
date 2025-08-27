@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Anexa.Infrastructure")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6e197ea45708021b48be3153245fbeb9262c92bf")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0bf6af0691f0c344af19b1612326f8064cdedbf0")]
 [assembly: System.Reflection.AssemblyProductAttribute("Anexa.Infrastructure")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Anexa.Infrastructure")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

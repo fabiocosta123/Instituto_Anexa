@@ -3,7 +3,8 @@ import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import { toast } from "react-toastify";
 import api from "../app/services/api";
-import "../styles/dashboard.css";
+import "@/style/dashboard.css";
+
 
 interface Curso {
   id: number;

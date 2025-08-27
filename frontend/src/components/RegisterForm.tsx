@@ -79,7 +79,7 @@ export default function RegisterForm() {
     }
 
     try {
-      await axios.post("https://localhost:7123/api/Usuarios", form);
+      await axios.post(`${process.env.NEXT_PUBLIC_API_URL}/api/Usuarios`, form);
       toast.success("Usuário cadastrado com sucesso!");
 
       setTimeout(() => {

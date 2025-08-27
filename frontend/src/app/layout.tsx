@@ -5,6 +5,8 @@ import { FaLinkedin, FaGithub } from "react-icons/fa";
 import "./globals.css";
 import ThemeToggle from "@/components/ThemeToogle";
 
+
+
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],

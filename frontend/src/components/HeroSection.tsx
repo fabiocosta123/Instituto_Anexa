@@ -21,6 +21,7 @@ export default function HeroSection() {
           width={600}
           height={400}
           className="hero-image"
+          priority
         />
       </motion.div>
 

@@ -15,7 +15,7 @@ export default function CallToAction() {
       <motion.button
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
-        onClick={() => router.push("/cursos")}
+        onClick={() => router.push("/register")}
         className="cta-button"
       >
         Matricular-se

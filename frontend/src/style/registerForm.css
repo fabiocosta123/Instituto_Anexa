@@ -1,0 +1,93 @@
+/* Container principal */
+.register-container {
+  max-width: 500px;
+  margin: 3rem auto;
+  padding: 2rem;
+  background-color: #f9f9f9;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Título */
+.register-container h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+/* Wrapper para campos com ícone */
+.input-wrapper {
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+/* Input dentro do wrapper */
+.input-wrapper input {
+  width: 100%;
+  padding: 0.75rem;
+  padding-right: 2.5rem; /* espaço para o ícone */
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+
+/* Input genérico (sem ícone) */
+.register-input {
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: border-color 0.2s ease;
+}
+
+.register-input:focus {
+  border-color: #0078d4;
+  outline: none;
+}
+
+/* Botão de mostrar/ocultar senha */
+.eye-button {
+  position: absolute;
+  right: 0.75rem;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.1rem;
+  color: #555;
+}
+
+/* Botão de envio */
+.register-button {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: #0078d4;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.register-button:hover {
+  background-color: #005fa3;
+}
+
+/* Validação visual */
+.input-error {
+  border: 1px solid red;
+}
+
+.error-text {
+  color: red;
+  font-size: 0.85rem;
+  margin-top: -0.5rem;
+  margin-bottom: 0.5rem;
+  display: block;
+}

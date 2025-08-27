@@ -5,12 +5,14 @@ import axios from "axios";
 import { useRouter } from "next/navigation";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { FaEye, FaEyeSlash } from "react-icons/fa";
 import "@/style/loginForm.css";
 
 export default function LoginForm() {
   const router = useRouter();
   const [email, setEmail] = useState("");
   const [senha, setSenha] = useState("");
+  const [showSenhaLogin, setShowSenhaLogin] = useState(false);
 
   const handleLogin = async () => {
     if (!email && !senha) {
@@ -57,13 +59,22 @@ export default function LoginForm() {
         placeholder="Email"
         className="login-input"
       />
-      <input
-        type="password"
-        value={senha}
-        onChange={(e) => setSenha(e.target.value)}
-        placeholder="Senha"
-        className="login-input"
-      />
+      <div className="input-wrapper">
+        <input
+          type={showSenhaLogin ? "text" : "password"}
+          name="senha"
+          placeholder="Senha"
+          onChange={(e) => setSenha(e.target.value)}
+          className="login-input"
+        />
+        <button
+          type="button"
+          className="eye-button"
+          onClick={() => setShowSenhaLogin(!showSenhaLogin)}
+        >
+          {showSenhaLogin ? <FaEyeSlash /> : <FaEye />}
+        </button>
+      </div>
       <button onClick={handleLogin} className="login-button">
         Entrar
       </button>

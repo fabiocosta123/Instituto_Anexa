@@ -31,7 +31,9 @@ namespace Anexa.Application.UseCases.CriarUsuario
                 command.Endereco.Cep);
 
 
-            var senhaHash = CriptografarSenha(command.Senha); // ou usar um serviço de hash
+            //var senhaHash = CriptografarSenha(command.Senha); // ou usar um serviço de hash
+            var senhaHash = BCrypt.Net.BCrypt.HashPassword(command.Senha);
+
 
             var usuario = new Usuario(command.Nome, cpf, email, endereco, senhaHash);
 
@@ -42,10 +44,10 @@ namespace Anexa.Application.UseCases.CriarUsuario
             );
 
         }
-        private string CriptografarSenha(string senha)
-        {
-            return BCrypt.Net.BCrypt.HashPassword(senha);
-        }
+        //private string CriptografarSenha(string senha)
+        //{
+        //    return BCrypt.Net.BCrypt.HashPassword(senha);
+        //}
 
     }
 }

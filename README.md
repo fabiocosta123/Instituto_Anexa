@@ -3,6 +3,11 @@
 Repositório que representa a camada de Domínio da aplicação **Anexa**, responsável por encapsular regras de negócio, entidades ricas, eventos de domínio e suas interações.
 
 ---
+## Images
+![Pagina Home](../Plataforma_Anexa/frontend/public/home.png)
+![Pagina Home modo escuro](../Plataforma_Anexa/frontend/public/homeDark.png)
+![Pagina Login](../Plataforma_Anexa/frontend/public/login.png)
+![Pagina login modo escuro](../Plataforma_Anexa/frontend/public/loginDark.png)
 
 ## 📚 Índice
 

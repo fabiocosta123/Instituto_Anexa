@@ -6,6 +6,42 @@
   },
   "paths": {
     "/api/Cursos": {
+      "get": {
+        "tags": [
+          "Cursos"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/CursoDto"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/CursoDto"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/CursoDto"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
       "post": {
         "tags": [
           "Cursos"

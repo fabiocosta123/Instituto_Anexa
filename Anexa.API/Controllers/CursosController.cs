@@ -5,6 +5,7 @@ using Anexa.Application.UseCases.CriarCurso;
 using Anexa.Application.UseCases.ObterCursoPorId;
 using Anexa.Application.UseCases.RemoverCurso;
 using Anexa.Domain.Interfaces;
+using Microsoft.AspNetCore.Cors.Infrastructure;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Anexa.API.Controllers
@@ -16,12 +17,34 @@ namespace Anexa.API.Controllers
         private readonly ICursoRepository _cursoRepository;
         private readonly IUsuarioRepository _usuarioRepository;
         private readonly IModuloRepository _moduloRepository;
+        
 
         public CursosController(ICursoRepository cursoRepository, IUsuarioRepository usuarioRepository, IModuloRepository moduloRepository)
         {
             _cursoRepository = cursoRepository;
             _usuarioRepository = usuarioRepository;
             _moduloRepository = moduloRepository;
+        }
+     
+
+        // Este método atende GET /api/Cursos
+        [HttpGet]
+        public async Task<ActionResult<IEnumerable<CursoDto>>> GetAll()
+        {
+            var cursos = await _cursoRepository.ObterTodos();
+            // Converte domínio → DTO
+            var cursosDto = cursos.Select(c => new CursoDto
+            {
+                Id = c.Id,
+                Titulo = c.Titulo,        // ← aqui
+                Descricao = c.Descricao,
+                Preco = c.Preco,
+                Ativo = c.Ativo,
+                DataCriacao = c.DataCriacao,
+                InstrutorId = c.InstrutorId,
+                NomeInstrutor = c.Instrutor.Nome // ou c.Instrutor.NomeCompleto, de acordo com sua entidade
+            });
+            return Ok(cursos);
         }
 
         [HttpPost]

@@ -6,8 +6,13 @@ EXPOSE 80
 # Etapa 2: Imagem para build
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 WORKDIR /src
+
+# Copia tudo do repositório
 COPY . .
-RUN dotnet publish -c Release -o /app/publish
+
+# Restaura e publica a solução completa
+RUN dotnet restore Anexa.sln
+RUN dotnet publish Anexa.sln -c Release -o /app/publish
 
 # Etapa 3: Finaliza com runtime
 FROM base AS final

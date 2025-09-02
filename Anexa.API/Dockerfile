@@ -7,14 +7,14 @@ EXPOSE 80
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 WORKDIR /src
 
-# Copia todo o repositório para dentro de /src
+# Copia todo o conteúdo de Anexa.API (contexto de build)
 COPY . .
 
-# Restaura e publica diretamente o projeto Anexa.API
-RUN dotnet restore Anexa.API/Anexa.API.csproj
-RUN dotnet publish Anexa.API/Anexa.API.csproj -c Release -o /app/publish
+# Restaura e publica o projeto diretamente
+RUN dotnet restore            # detecta automaticamente o Anexa.API.csproj
+RUN dotnet publish -c Release -o /app/publish
 
-# Etapa 3: Imagem final de runtime
+# Etapa 3: Finaliza com runtime
 FROM base AS final
 WORKDIR /app
 COPY --from=build /app/publish .

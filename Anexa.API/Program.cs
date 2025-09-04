@@ -71,6 +71,8 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+builder.WebHost.UseUrls("http://0.0.0.0:80");
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -89,5 +91,8 @@ app.UseAuthorization();
 app.MapControllers();
 
 app.UseMiddleware<LoginRequisicaoMiddleware>();
+
+// Endpoint de health check para o Render
+app.MapGet("/", () => Results.Ok("Anexa.API is alive"));
 
 app.Run();

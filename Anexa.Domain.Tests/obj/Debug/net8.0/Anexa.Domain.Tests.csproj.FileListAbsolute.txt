@@ -155,3 +155,5 @@ C:\Dev_Projetos\Instituto_Anexa\Plataforma_Anexa\Anexa.Domain.Tests\obj\Debug\ne
 C:\Dev_Projetos\Instituto_Anexa\Plataforma_Anexa\Anexa.Domain.Tests\obj\Debug\net8.0\Anexa.Domain.Tests.pdb
 C:\Dev_Projetos\Instituto_Anexa\Plataforma_Anexa\Anexa.Domain.Tests\obj\Debug\net8.0\Anexa.Domain.Tests.genruntimeconfig.cache
 C:\Dev_Projetos\Instituto_Anexa\Plataforma_Anexa\Anexa.Domain.Tests\obj\Debug\net8.0\ref\Anexa.Domain.Tests.dll
+C:\Dev_Projetos\Instituto_Anexa\Plataforma_Anexa\Anexa.Domain.Tests\bin\Debug\net8.0\BCrypt.Net-Next.dll
+C:\Dev_Projetos\Instituto_Anexa\Plataforma_Anexa\Anexa.Domain.Tests\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll

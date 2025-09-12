@@ -1,6 +1,7 @@
 'use client';
 
 import './quem-somos.css';
+import Image from 'next/image';
 
 const pastores = [
   {
@@ -38,7 +39,7 @@ export default function QuemSomosPage() {
       <div className="qs-grid">
         {pastores.map((p, index) => (
           <div key={index} className="qs-card">
-            <img src={p.foto} alt={p.nome} className="qs-foto" />
+            <Image src={p.foto} alt={p.nome} className="qs-foto" />
             <h3>{p.nome}</h3>
             <p>{p.formacao}</p>
             <p><em>{p.igreja}</em></p>

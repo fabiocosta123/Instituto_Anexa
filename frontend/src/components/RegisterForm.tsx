@@ -4,17 +4,14 @@ import { useState } from "react";
 import { useRouter } from "next/navigation";
 import axios from "axios";
 import { toast, ToastContainer } from "react-toastify";
-import { FaEye, FaEyeSlash } from "react-icons/fa";
-
 import "react-toastify/dist/ReactToastify.css";
 import "../style/registerForm.css";
 
+import FormInput from "@/components/FormInput";
+
 export default function RegisterForm() {
   const router = useRouter();
-
-  const [showSenha, setShowSenha] = useState(false);
-  const [showConfirmarSenha, setShowConfirmarSenha] = useState(false);
-
+  const [loading, setLoading] = useState(false);
   const [errors, setErrors] = useState<{ [key: string]: string }>({});
 
   const [form, setForm] = useState({
@@ -50,13 +47,13 @@ export default function RegisterForm() {
       novosErros.confirmarSenha = "As senhas não coincidem";
     }
 
-    const endereco = form.endereco;
-    if (!endereco.rua) novosErros.rua = "Rua é obrigatória";
-    if (!endereco.numero) novosErros.numero = "Número é obrigatório";
-    if (!endereco.bairro) novosErros.bairro = "Bairro é obrigatório";
-    if (!endereco.cidade) novosErros.cidade = "Cidade é obrigatória";
-    if (!endereco.estado) novosErros.estado = "Estado é obrigatório";
-    if (!endereco.cep) novosErros.cep = "CEP é obrigatório";
+    const { rua, numero, bairro, cidade, estado, cep } = form.endereco;
+    if (!rua) novosErros.rua = "Rua é obrigatória";
+    if (!numero) novosErros.numero = "Número é obrigatório";
+    if (!bairro) novosErros.bairro = "Bairro é obrigatório";
+    if (!cidade) novosErros.cidade = "Cidade é obrigatória";
+    if (!estado) novosErros.estado = "Estado é obrigatória";
+    if (!cep) novosErros.cep = "CEP é obrigatório";
 
     setErrors(novosErros);
     return Object.keys(novosErros).length === 0;
@@ -73,10 +70,14 @@ export default function RegisterForm() {
   };
 
   const handleSubmit = async () => {
+    if (loading) return;
+
     if (!validarFormulario()) {
       toast.error("Preencha todos os campos corretamente");
       return;
     }
+
+    setLoading(true);
 
     try {
       await axios.post(`${process.env.NEXT_PUBLIC_API_URL}/api/Usuarios`, form);
@@ -86,82 +87,78 @@ export default function RegisterForm() {
         router.push("/login");
       }, 1500);
     } catch (err) {
+      console.error(err);
       toast.error("Erro ao cadastrar usuário");
+    } finally {
+      setLoading(false);
     }
   };
 
   return (
     <div className="register-container">
       <h2>Cadastro de Usuário</h2>
-      <input
+
+      <FormInput
         name="nome"
         placeholder="Nome"
+        value={form.nome}
         onChange={handleChange}
-        className={`register-input ${errors.name ? "input-error" : ""}`}
+        error={errors.nome}
       />
-      {errors.name && <span className="error-text">{errors.name}</span>}
 
-      <input
+      <FormInput
         name="email"
         placeholder="Email"
+        value={form.email}
         onChange={handleChange}
-         className={`register-input ${errors.email ? "input-error" : ""}`}
+        error={errors.email}
       />
-      {errors.email && <span className="error-text">{errors.email}</span>}
 
-      <input
+      <FormInput
         name="cpf"
         placeholder="CPF"
+        value={form.cpf}
         onChange={handleChange}
-         className={`register-input ${errors.cpf ? "input-error" : ""}`}
+        error={errors.cpf}
       />
-      {errors.cpf && <span className="error-text">{errors.cpf}</span>}
 
-      <div className="input-wrapper">
-        <input
-          type={showSenha ? "text" : "password"}
-          name="senha"
-          placeholder="Senha"
+      <FormInput
+        name="senha"
+        placeholder="Senha"
+        value={form.senha}
+        onChange={handleChange}
+        error={errors.senha}
+        showToggle
+      />
+
+      <FormInput
+        name="confirmarSenha"
+        placeholder="Confirmar Senha"
+        value={form.confirmarSenha}
+        onChange={handleChange}
+        error={errors.confirmarSenha}
+        showToggle
+      />
+
+      {["rua", "numero", "bairro", "cidade", "estado", "cep"].map((campo) => (
+        <FormInput
+          key={campo}
+          name={campo}
+          placeholder={campo.charAt(0).toUpperCase() + campo.slice(1)}
+          value={form.endereco[campo as keyof typeof form.endereco]}
           onChange={handleChange}
-          className={errors.senha ? "input-error" : ""}
+          error={errors[campo]}
         />
-        <button
-          type="button"
-          className="eye-button"
-          onClick={() => setShowSenha(!showSenha)}
-        >
-          {showSenha ? <FaEyeSlash /> : <FaEye />}
-        </button>
-      </div>
-      {errors.senha && <span className="error-text">{errors.senha}</span>}
+      ))}
 
-      <div className="input-wrapper">
-        <input
-          type={showConfirmarSenha ? "text" : "password"}
-          name="confirmarSenha"
-          placeholder="Confirmar Senha"
-          onChange={handleChange}
-          className={errors.confirmarSenha ? "input-error" : ""}
-        />
-        <button
-          type="button"
-          className="eye-button"
-          onClick={() => setShowConfirmarSenha(!showConfirmarSenha)}
-        >
-          {showConfirmarSenha ? <FaEyeSlash /> : <FaEye />}
-        </button>
-      </div>
-      {errors.confirmarSenha && (
-        <span className="error-text">{errors.confirmarSenha}</span>
-      )}
+      <button
+        onClick={handleSubmit}
+        className="register-button"
+        disabled={loading}
+      >
+        {loading ? "Cadastrando..." : "Cadastrar"}
+      </button>
 
-      <input name="rua" placeholder="Rua" onChange={handleChange}  className={`register-input ${errors.nome ? "input-error" : ""}`}/>
-      <input name="numero" placeholder="Número" onChange={handleChange}  className={`register-input ${errors.nome ? "input-error" : ""}`} />
-      <input name="bairro" placeholder="Bairro" onChange={handleChange}  className={`register-input ${errors.nome ? "input-error" : ""}`} />
-      <input name="cidade" placeholder="Cidade" onChange={handleChange}  className={`register-input ${errors.nome ? "input-error" : ""}`} />
-      <input name="estado" placeholder="Estado" onChange={handleChange}  className={`register-input ${errors.nome ? "input-error" : ""}`} />
-      <input name="cep" placeholder="CEP" onChange={handleChange}  className={`register-input ${errors.nome ? "input-error" : ""}`} />
-      <button onClick={handleSubmit} className="register-button">Cadastrar</button>
       <ToastContainer position="top-right" autoClose={3000} />
     </div>
   );

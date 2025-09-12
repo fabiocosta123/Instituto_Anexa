@@ -9,7 +9,7 @@ import { FaEye, FaEyeSlash } from "react-icons/fa";
 import "@/style/loginForm.css";
 
 export default function LoginForm() {
-  const API_URL = process.env.NEXT_PUBLIC_API_URL!;
+  const API_URL = process.env.NEXT_PUBLIC_API_URL ?? "";
   const router = useRouter();
 
   const [email, setEmail] = useState("");
@@ -48,6 +48,7 @@ export default function LoginForm() {
       router.push("/dashboard");
 
     } catch (err) {
+      console.error(err);
       toast.error("Email ou senha inválidos");
     }
   };
